@@ -1,0 +1,52 @@
+﻿@model ICollection<Employee>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <h5 class="text-center">Employess</h5>
+        <hr />
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <a class="btn btn-sm btn-outline-primary" asp-controller="Employee" asp-action="Create">Add Employee</a>
+    </div>
+</div>
+<div class="row mt-3">
+    <div class="col-md-12">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Basic Info</th>
+                    <th>Other Info</th>
+                    <th>Payment Info</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var employee in Model)
+                {
+                    <tr>
+                        <td>
+                            Code : @employee.Code <br />
+                            Name : @employee.FirstName @employee.LastName <br />
+                            Phone : @employee.PhoneNumber <br />
+                        </td>
+                        <td>
+                            Relationship Status : @employee.RelationshipStatus <br />
+                            Gender : @employee.Gender.Name <br />
+                            Age : @employee.Age <br />
+                        </td>
+                        <td>
+                            Daily Rate : @employee.DailyRate <br />
+                            Payment Method : @employee.PaymentMethod.Name
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+

@@ -1,0 +1,26 @@
+using PayrollManagementSystem.Controllers;
+using PayrollManagementSystem.Model.DatabaseContect;
+using PayrollManagementSystem.Model.Models;
+
+namespace PayrollManagementSystem.UnitTest
+{
+    [TestClass]
+    public class UnitTest1
+    {
+        [TestMethod]
+        public void TestForIndex()
+        {
+            var employees = new List<Employee>();
+
+            // Arrange
+            var dbContext = new PayrollManagementSystemContext();
+            var employeeController = new EmployeeController(dbContext);
+
+            // Act
+            var viewResult = employeeController.Index();
+
+            // Assert
+            Assert.AreEqual<ICollection<Employee>>(employees, employees);
+        }
+    }
+}

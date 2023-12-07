@@ -1,0 +1,14 @@
+D:\PayrollManagementSystem\PayrollManagementSystem.Model\bin\Debug\net7.0\PayrollManagementSystem.Model.deps.json
+D:\PayrollManagementSystem\PayrollManagementSystem.Model\bin\Debug\net7.0\PayrollManagementSystem.Model.runtimeconfig.json
+D:\PayrollManagementSystem\PayrollManagementSystem.Model\bin\Debug\net7.0\PayrollManagementSystem.Model.dll
+D:\PayrollManagementSystem\PayrollManagementSystem.Model\bin\Debug\net7.0\PayrollManagementSystem.Model.pdb
+D:\PayrollManagementSystem\PayrollManagementSystem.Model\obj\Debug\net7.0\PayrollManagementSystem.Model.csproj.AssemblyReference.cache
+D:\PayrollManagementSystem\PayrollManagementSystem.Model\obj\Debug\net7.0\PayrollManagementSystem.Model.GeneratedMSBuildEditorConfig.editorconfig
+D:\PayrollManagementSystem\PayrollManagementSystem.Model\obj\Debug\net7.0\PayrollManagementSystem.Model.AssemblyInfoInputs.cache
+D:\PayrollManagementSystem\PayrollManagementSystem.Model\obj\Debug\net7.0\PayrollManagementSystem.Model.AssemblyInfo.cs
+D:\PayrollManagementSystem\PayrollManagementSystem.Model\obj\Debug\net7.0\PayrollManagementSystem.Model.csproj.CoreCompileInputs.cache
+D:\PayrollManagementSystem\PayrollManagementSystem.Model\obj\Debug\net7.0\PayrollManagementSystem.Model.dll
+D:\PayrollManagementSystem\PayrollManagementSystem.Model\obj\Debug\net7.0\refint\PayrollManagementSystem.Model.dll
+D:\PayrollManagementSystem\PayrollManagementSystem.Model\obj\Debug\net7.0\PayrollManagementSystem.Model.pdb
+D:\PayrollManagementSystem\PayrollManagementSystem.Model\obj\Debug\net7.0\PayrollManagementSystem.Model.genruntimeconfig.cache
+D:\PayrollManagementSystem\PayrollManagementSystem.Model\obj\Debug\net7.0\ref\PayrollManagementSystem.Model.dll
