@@ -17,12 +17,13 @@
 </div>
 <div class="row mt-3">
     <div class="col-md-12">
-        <table class="table table-bordered">
+        <table class="table table-bordered table-hover">
             <thead>
                 <tr>
                     <th>Basic Info</th>
                     <th>Other Info</th>
                     <th>Payment Info</th>
+                    <th>Action</th>
                 </tr>
             </thead>
             <tbody>
@@ -42,6 +43,10 @@
                         <td>
                             Daily Rate : @employee.DailyRate <br />
                             Payment Method : @employee.PaymentMethod.Name
+                        </td>
+                        <td>
+                            <a class="btn btn-sm btn-outline-primary" asp-controller="Employee" asp-action="Details" asp-route-id="@employee.Id">Details</a>
+                            <a class="btn btn-sm btn-outline-danger" asp-controller="Employee" asp-action="Delete" asp-route-id="@employee.Id">Delete</a>
                         </td>
                     </tr>
                 }
