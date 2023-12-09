@@ -11,19 +11,19 @@ namespace PayrollManagementSystem.Model.Models
 
         public int Id { get; set; }
 
-        [Required(ErrorMessage = "Please, provied code.")]
+        [Required(ErrorMessage = "Please, provide code.")]
         [StringLength(30, MinimumLength = 3)]
         public string Code { get; set; }
 
-        [Required(ErrorMessage = "Please, provied first name.")]
+        [Required(ErrorMessage = "Please, provide first name.")]
         [StringLength(30, MinimumLength = 2)]
         public string FirstName { get; set; }
 
-        [Required(ErrorMessage = "Please, provied last name.")]
+        [Required(ErrorMessage = "Please, provide last name.")]
         [StringLength(30, MinimumLength = 2)]
         public string LastName { get; set; }
 
-        [Required(ErrorMessage = "Please, provied phone number.")]
+        [Required(ErrorMessage = "Please, provide phone number.")]
         [StringLength(30, MinimumLength = 2)]
         public string PhoneNumber { get; set; }
         public string RelationshipStatus { get; set; }
@@ -32,7 +32,7 @@ namespace PayrollManagementSystem.Model.Models
         public int GenderId { get; set; }
         public int Age { get; set; }
 
-        [Required(ErrorMessage = "Please, provied daily rate.")]
+        [Required(ErrorMessage = "Please, provide daily rate.")]
         public double DailyRate { get; set; }
 
         [Required(ErrorMessage = "Please, select payment method.")]
