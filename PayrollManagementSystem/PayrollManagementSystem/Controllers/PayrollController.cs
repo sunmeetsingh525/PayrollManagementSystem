@@ -51,46 +51,46 @@ namespace PayrollManagementSystem.Controllers
             return View(payrollModel);
         }
 
-        [HttpGet]
-        public async Task<ActionResult<Employee>> Details(int id)
-        {
-            if (id == 0)
-                return BadRequest();
+        //[HttpGet]
+        //public async Task<ActionResult<Employee>> Details(int id)
+        //{
+        //    if (id == 0)
+        //        return BadRequest();
 
-            var existPayroll = await _dbContext.Payrolls.Where(e => e.Id == id).FirstOrDefaultAsync();
+        //    var existPayroll = await _dbContext.Payrolls.Where(e => e.Id == id).FirstOrDefaultAsync();
 
-            if (existPayroll is null)
-                return BadRequest();
+        //    if (existPayroll is null)
+        //        return BadRequest();
 
-            await GetEmployee();
-            return View(existPayroll);
-        }
+        //    await GetEmployee();
+        //    return View(existPayroll);
+        //}
 
-        [HttpPost]
-        public async Task<IActionResult> Details(Payroll payrollModel)
-        {
-            _dbContext.Payrolls.Update(payrollModel);
-            await _dbContext.SaveChangesAsync();
-            await GetEmployee();
-            return RedirectToAction("Index");
-        }
+        //[HttpPost]
+        //public async Task<IActionResult> Details(Payroll payrollModel)
+        //{
+        //    _dbContext.Payrolls.Update(payrollModel);
+        //    await _dbContext.SaveChangesAsync();
+        //    await GetEmployee();
+        //    return RedirectToAction("Index");
+        //}
 
-        [HttpGet]
-        public async Task<IActionResult> Delete(int id)
-        {
-            if (id == 0)
-                return BadRequest();
+        //[HttpGet]
+        //public async Task<IActionResult> Delete(int id)
+        //{
+        //    if (id == 0)
+        //        return BadRequest();
 
-            var existPayroll = await _dbContext.Payrolls.Where(e => e.Id == id).FirstOrDefaultAsync();
+        //    var existPayroll = await _dbContext.Payrolls.Where(e => e.Id == id).FirstOrDefaultAsync();
 
-            if (existPayroll is null)
-                return BadRequest();
+        //    if (existPayroll is null)
+        //        return BadRequest();
 
-            _dbContext.Payrolls.Remove(existPayroll);
-            await _dbContext.SaveChangesAsync();
+        //    _dbContext.Payrolls.Remove(existPayroll);
+        //    await _dbContext.SaveChangesAsync();
 
-            return RedirectToAction("Index");
-        }
+        //    return RedirectToAction("Index");
+        //}
 
         private async Task GetEmployee()
         {

@@ -39,36 +39,36 @@ namespace PayrollManagementSystem.UnitTest
             Assert.AreEqual<Payroll>(payroll, payroll);
         }
 
-        [TestMethod]
-        public void TestForDetails()
-        {
-            var payroll = new Payroll();
+        //[TestMethod]
+        //public void TestForDetails()
+        //{
+        //    var payroll = new Payroll();
 
-            // Arrange
-            var dbContext = new PayrollManagementSystemContext();
-            var payrollController = new PayrollController(dbContext);
+        //    // Arrange
+        //    var dbContext = new PayrollManagementSystemContext();
+        //    var payrollController = new PayrollController(dbContext);
 
-            // Act
-            var viewResult = payrollController.Details(1);
+        //    // Act
+        //    var viewResult = payrollController.Details(1);
 
-            // Assert
-            Assert.AreEqual<Payroll>(payroll, payroll);
-        }
+        //    // Assert
+        //    Assert.AreEqual<Payroll>(payroll, payroll);
+        //}
 
-        [TestMethod]
-        public void TestForDelete()
-        {
-            var payroll = new Payroll();
+        //[TestMethod]
+        //public void TestForDelete()
+        //{
+        //    var payroll = new Payroll();
 
-            // Arrange
-            var dbContext = new PayrollManagementSystemContext();
-            var payrollController = new PayrollController(dbContext);
+        //    // Arrange
+        //    var dbContext = new PayrollManagementSystemContext();
+        //    var payrollController = new PayrollController(dbContext);
 
-            // Act
-            var viewResult = payrollController.Delete(1);
+        //    // Act
+        //    var viewResult = payrollController.Delete(1);
 
-            // Assert
-            Assert.AreEqual<Payroll>(payroll, payroll);
-        }
+        //    // Assert
+        //    Assert.AreEqual<Payroll>(payroll, payroll);
+        //}
     }
 }

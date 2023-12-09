@@ -9,13 +9,13 @@ namespace PayrollManagementSystem.Model.Models
         [Required(ErrorMessage = "Please, select employee.")]
         public int EmployeeId { get; set; }
 
-        [Required(ErrorMessage = "Please, provide working day.")]
+        [Required(ErrorMessage = "Please, provied working day.")]
         public int NumberOfDaysWorked { get; set; }
 
-        [Required(ErrorMessage = "Please, provide deductions amount.")]
+        [Required(ErrorMessage = "Please, provied deductions amount.")]
         public double Deductions { get; set; }
 
-        [Required(ErrorMessage = "Please, provide total payment.")]
+        [Required(ErrorMessage = "Please, provied total payment.")]
         public double TotalPayment { get; set; }
 
         public Employee Employee { get; set; }
