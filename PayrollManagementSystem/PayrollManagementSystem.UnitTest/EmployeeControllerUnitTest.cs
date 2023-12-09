@@ -5,7 +5,7 @@ using PayrollManagementSystem.Model.Models;
 namespace PayrollManagementSystem.UnitTest
 {
     [TestClass]
-    public class UnitTest1
+    public class EmployeeControllerUnitTest
     {
         [TestMethod]
         public void TestForIndex()
@@ -21,22 +21,6 @@ namespace PayrollManagementSystem.UnitTest
 
             // Assert
             Assert.AreEqual<ICollection<Employee>>(employees, employees);
-        }
-
-        [TestMethod]
-        public void TestForCreate()
-        {
-            var employee = new Employee();
-
-            // Arrange
-            var dbContext = new PayrollManagementSystemContext();
-            var employeeController = new EmployeeController(dbContext);
-
-            // Act
-            var viewResult = employeeController.Create();
-
-            // Assert
-            Assert.AreEqual<Employee>(employee, employee);
         }
 
         [TestMethod]

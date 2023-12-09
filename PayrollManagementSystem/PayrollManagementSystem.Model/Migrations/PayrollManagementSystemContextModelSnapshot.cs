@@ -320,6 +320,33 @@ namespace PayrollManagementSystem.Model.Migrations
                     b.ToTable("PaymentMethods");
                 });
 
+            modelBuilder.Entity("PayrollManagementSystem.Model.Models.Payroll", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<double>("Deductions")
+                        .HasColumnType("float");
+
+                    b.Property<int>("EmployeeId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("NumberOfDaysWorked")
+                        .HasColumnType("int");
+
+                    b.Property<double>("TotalPayment")
+                        .HasColumnType("float");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("EmployeeId");
+
+                    b.ToTable("Payrolls");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", null)
@@ -405,9 +432,25 @@ namespace PayrollManagementSystem.Model.Migrations
                         .OnDelete(DeleteBehavior.Restrict);
                 });
 
+            modelBuilder.Entity("PayrollManagementSystem.Model.Models.Payroll", b =>
+                {
+                    b.HasOne("PayrollManagementSystem.Model.Models.Employee", "Employee")
+                        .WithMany("Payrolls")
+                        .HasForeignKey("EmployeeId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Employee");
+                });
+
             modelBuilder.Entity("PayrollManagementSystem.Model.Models.ApplicationUser", b =>
                 {
                     b.Navigation("Employees");
+                });
+
+            modelBuilder.Entity("PayrollManagementSystem.Model.Models.Employee", b =>
+                {
+                    b.Navigation("Payrolls");
                 });
 
             modelBuilder.Entity("PayrollManagementSystem.Model.Models.Gender", b =>

@@ -56,51 +56,42 @@ namespace PayrollManagementSystem.Controllers
         }
 
         [HttpGet]
-        public ActionResult Details(int id)
+        public async Task<ActionResult<Employee>> Details(int id)
         {
-            return View();
-        }
+            if (id == 0)
+                return BadRequest();
 
-        
+            var existEmployee = await _dbContext.Employees.Where(e => e.Id == id).FirstOrDefaultAsync();
 
-        [HttpGet]
-        public ActionResult Edit(int id)
-        {
-            return View();
-        }
+            if (existEmployee is null)
+                return BadRequest();
 
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
-        {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
-        }
-
-        [HttpGet]
-        public ActionResult Delete(int id)
-        {
-            return View();
+            return View(existEmployee);
         }
 
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
+        public async Task<IActionResult> Details(Employee employeeModel)
         {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
+            _dbContext.Employees.Update(employeeModel);
+            await _dbContext.SaveChangesAsync();
+            return RedirectToAction("Index");
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> Delete(int id)
+        {
+            if (id == 0)
+                return BadRequest();
+
+            var existEmployee = await _dbContext.Employees.Where(e => e.Id == id).FirstOrDefaultAsync();
+
+            if (existEmployee is null)
+                return BadRequest();
+
+            _dbContext.Employees.Remove(existEmployee);
+            await _dbContext.SaveChangesAsync();
+
+            return RedirectToAction("Index");
         }
     }
 }

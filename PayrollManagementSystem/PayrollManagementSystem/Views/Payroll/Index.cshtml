@@ -1,0 +1,48 @@
+﻿@model ICollection<Payroll> 
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <h5 class="text-center">Payrolls</h5>
+        <hr />
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <a class="btn btn-sm btn-outline-primary" asp-controller="Payroll" asp-action="Create">Create Payroll</a>
+    </div>
+</div>
+<div class="row justify-content-center align-content-center mt-4">
+    <div class="col-md-8">
+        <table class="table table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>Employee</th>
+                    <th>Payment Info</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var payroll in Model)
+                {
+                    <tr>
+                        <td>Full Name : @payroll.Employee.FirstName @payroll.Employee.LastName</td>
+                        <td>
+                            Number of work day : @payroll.NumberOfDaysWorked <br />
+                            Deductions : @payroll.Deductions <br />
+                            Total Payment : @payroll.TotalPayment
+                        </td>
+                        <td>
+                            <a class="btn btn-sm btn-outline-primary" asp-controller="Payroll" asp-action="Details" asp-route-id="@payroll.Id">Details</a>
+                            <a class="btn btn-sm btn-outline-danger" asp-controller="Payroll" asp-action="Delete" asp-route-id="@payroll.Id">Delete</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+

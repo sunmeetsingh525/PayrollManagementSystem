@@ -1,0 +1,48 @@
+﻿@model PayrollManagementSystem.Model.Models.Payroll
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <h5 class="text-center">Update Payroll</h5>
+        <hr />
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <form class="row g-3" method="post" asp-controller="Payroll" asp-action="Details">
+            <div class="col-md-4">
+                <label for="employeeId" class="form-label">Employee</label>
+                <select class="form-select" asp-for="EmployeeId">
+                    @foreach (var employee in ViewBag.Employess)
+                    {
+                        <option value="@employee.Id">@employee.Name</option>
+                    }
+                </select>
+                <span class="text-danger" asp-validation-for="EmployeeId"></span>
+            </div>
+            <div class="col-md-4">
+                <label for="numberOfDaysWorked" class="form-label">Number Of Days Worked</label>
+                <input type="number" class="form-control" id="numberOfDaysWorked" asp-for="NumberOfDaysWorked" placeholder="Enter Number Of Days Worked">
+                <span class="text-danger" asp-validation-for="NumberOfDaysWorked"></span>
+            </div>
+            <div class="col-md-4">
+                <label for="deductions" class="form-label">Deductions</label>
+                <input type="number" class="form-control" id="deductions" asp-for="Deductions" placeholder="Enter Deductions">
+                <span class="text-danger" asp-validation-for="Deductions"></span>
+            </div>
+            <div class="col-md-4">
+                <label for="totalPayment" class="form-label">Total Payment</label>
+                <input type="number" class="form-control" id="totalPayment" asp-for="TotalPayment" placeholder="Enter Total Payment">
+                <span class="text-danger" asp-validation-for="TotalPayment"></span>
+            </div>
+            <div class="col-12">
+                <button type="submit" class="btn btn-sm btn-outline-success">Update</button>
+                <a class="btn btn-sm btn-outline-primary" asp-controller="Payroll" asp-action="Index">Cancel</a>
+            </div>
+        </form>
+    </div>
+</div>
+

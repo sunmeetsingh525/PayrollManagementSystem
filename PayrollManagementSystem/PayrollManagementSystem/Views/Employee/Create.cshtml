@@ -16,18 +16,22 @@
             <div class="col-md-4">
                 <label for="employeeCode" class="form-label" placeholder="Enter Code">Code</label>
                 <input type="text" class="form-control" id="employeeCode" asp-for="Code">
+                <span class="text-danger" asp-validation-for="Code"></span>
             </div>
             <div class="col-md-4">
                 <label for="firstName" class="form-label">First Name</label>
                 <input type="text" class="form-control" id="firstName" asp-for="FirstName" placeholder="Enter First Name">
+                <span class="text-danger" asp-validation-for="FirstName"></span>
             </div>
             <div class="col-md-4">
                 <label for="lastName" class="form-label">Last Name</label>
                 <input type="text" class="form-control" id="lastName" asp-for="LastName" placeholder="Enter Last Name">
+                <span class="text-danger" asp-validation-for="LastName"></span>
             </div>
             <div class="col-md-4">
                 <label for="phone" class="form-label">Phone</label>
                 <input type="text" class="form-control" id="phone" asp-for="PhoneNumber" placeholder="Enter Phone Number">
+                <span class="text-danger" asp-validation-for="PhoneNumber"></span>
             </div>
             <div class="col-md-4">
                 <label for="relationshipStatus" class="form-label">Relationship Status</label>
@@ -36,10 +40,10 @@
             <div class="col-md-2">
                 <label for="gender" class="form-label">Gender</label>
                 <select class="form-select" asp-for="GenderId">
-                    <option> -- Select Gender -- </option>
                     <option value=1>Male</option>
                     <option value=2>Female</option>
                 </select>
+                <span class="text-danger" asp-validation-for="GenderId"></span>
             </div>
             <div class="col-md-2">
                 <label for="age" class="form-label">Age</label>
@@ -48,14 +52,15 @@
             <div class="col-md-4">
                 <label for="dailyRate" class="form-label">Daily Rate</label>
                 <input type="number" class="form-control" id="dailyRate" asp-for="DailyRate" placeholder="Enter Daily Rate">
+                <span class="text-danger" asp-validation-for="DailyRate"></span>
             </div>
             <div class="col-md-4">
                 <label for="paymentMethod" class="form-label">Payment Method</label>
                 <select class="form-select" asp-for="PaymentMethodId">
-                    <option> -- Select Payment Method -- </option>
-                    <option value="1">Payple</option>
+                    <option value="1">PayPal</option>
                     <option value="2">Bank</option>
                 </select>
+                <span class="text-danger" asp-validation-for="PaymentMethodId"></span>
             </div>
             <div class="col-12">
                 <button type="submit" class="btn btn-sm btn-outline-success">Submit</button>

@@ -20,6 +20,7 @@ namespace PayrollManagementSystem.Model.DatabaseContect
         public DbSet<Gender> Genders { get; set; }  
         public DbSet<PaymentMethod> PaymentMethods { get; set; }
         public DbSet<Employee> Employees { get; set; }
+        public DbSet<Payroll> Payrolls { get; set; }    
 
         protected override void OnModelCreating(ModelBuilder builder)
         {

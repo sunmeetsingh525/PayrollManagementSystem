@@ -4,6 +4,11 @@ namespace PayrollManagementSystem.Model.Models
 {
     public class Employee
     {
+        public Employee()
+        {
+            Payrolls = new HashSet<Payroll>();
+        }
+
         public int Id { get; set; }
 
         [Required(ErrorMessage = "Please, provied code.")]
@@ -38,5 +43,6 @@ namespace PayrollManagementSystem.Model.Models
         public ApplicationUser ApplicationUser { get; set; }
         public Gender Gender { get; set; }  
         public PaymentMethod PaymentMethod { get; set; }
+        public ICollection<Payroll> Payrolls { get; set; }  
     }
 }
