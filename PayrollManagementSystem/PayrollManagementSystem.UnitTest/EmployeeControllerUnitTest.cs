@@ -22,7 +22,7 @@ namespace PayrollManagementSystem.UnitTest
             // Assert
             Assert.AreEqual<ICollection<Employee>>(employees, employees);
         }
-        
+
         [TestMethod]
         public void TestForCreate()
         {
@@ -34,6 +34,54 @@ namespace PayrollManagementSystem.UnitTest
 
             // Act
             var viewResult = employeeController.Create();
+
+            // Assert
+            Assert.AreEqual<Employee>(employee, employee);
+        }
+
+        [TestMethod]
+        public void TestForCreate()
+        {
+            var employee = new Employee();
+
+            // Arrange
+            var dbContext = new PayrollManagementSystemContext();
+            var employeeController = new EmployeeController(dbContext);
+
+            // Act
+            var viewResult = employeeController.Create();
+
+            // Assert
+            Assert.AreEqual<Employee>(employee, employee);
+        }
+
+        [TestMethod]
+        public void TestForDetails()
+        {
+            var employee = new Employee();
+
+            // Arrange
+            var dbContext = new PayrollManagementSystemContext();
+            var employeeController = new EmployeeController(dbContext);
+
+            // Act
+            var viewResult = employeeController.Details(1);
+
+            // Assert
+            Assert.AreEqual<Employee>(employee, employee);
+        }
+
+        [TestMethod]
+        public void TestForDelete()
+        {
+            var employee = new Employee();
+
+            // Arrange
+            var dbContext = new PayrollManagementSystemContext();
+            var employeeController = new EmployeeController(dbContext);
+
+            // Act
+            var viewResult = employeeController.Delete(1);
 
             // Assert
             Assert.AreEqual<Employee>(employee, employee);
