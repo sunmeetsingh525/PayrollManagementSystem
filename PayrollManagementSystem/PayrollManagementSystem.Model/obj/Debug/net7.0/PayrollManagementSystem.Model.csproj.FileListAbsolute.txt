@@ -12,3 +12,17 @@ D:\PayrollManagementSystem\PayrollManagementSystem.Model\obj\Debug\net7.0\refint
 D:\PayrollManagementSystem\PayrollManagementSystem.Model\obj\Debug\net7.0\PayrollManagementSystem.Model.pdb
 D:\PayrollManagementSystem\PayrollManagementSystem.Model\obj\Debug\net7.0\PayrollManagementSystem.Model.genruntimeconfig.cache
 D:\PayrollManagementSystem\PayrollManagementSystem.Model\obj\Debug\net7.0\ref\PayrollManagementSystem.Model.dll
+C:\Users\sunme\OneDrive\Desktop\PayrollManagementSystem Final\PayrollManagementSystem\PayrollManagementSystem.Model\obj\Debug\net7.0\PayrollManagementSystem.Model.dll
+C:\Users\sunme\OneDrive\Desktop\PayrollManagementSystem Final\PayrollManagementSystem\PayrollManagementSystem.Model\obj\Debug\net7.0\refint\PayrollManagementSystem.Model.dll
+C:\Users\sunme\OneDrive\Desktop\PayrollManagementSystem Final\PayrollManagementSystem\PayrollManagementSystem.Model\obj\Debug\net7.0\PayrollManagementSystem.Model.pdb
+C:\Users\sunme\OneDrive\Desktop\PayrollManagementSystem Final\PayrollManagementSystem\PayrollManagementSystem.Model\bin\Debug\net7.0\PayrollManagementSystem.Model.deps.json
+C:\Users\sunme\OneDrive\Desktop\PayrollManagementSystem Final\PayrollManagementSystem\PayrollManagementSystem.Model\bin\Debug\net7.0\PayrollManagementSystem.Model.runtimeconfig.json
+C:\Users\sunme\OneDrive\Desktop\PayrollManagementSystem Final\PayrollManagementSystem\PayrollManagementSystem.Model\bin\Debug\net7.0\PayrollManagementSystem.Model.dll
+C:\Users\sunme\OneDrive\Desktop\PayrollManagementSystem Final\PayrollManagementSystem\PayrollManagementSystem.Model\bin\Debug\net7.0\PayrollManagementSystem.Model.pdb
+C:\Users\sunme\OneDrive\Desktop\PayrollManagementSystem Final\PayrollManagementSystem\PayrollManagementSystem.Model\obj\Debug\net7.0\PayrollManagementSystem.Model.csproj.AssemblyReference.cache
+C:\Users\sunme\OneDrive\Desktop\PayrollManagementSystem Final\PayrollManagementSystem\PayrollManagementSystem.Model\obj\Debug\net7.0\PayrollManagementSystem.Model.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sunme\OneDrive\Desktop\PayrollManagementSystem Final\PayrollManagementSystem\PayrollManagementSystem.Model\obj\Debug\net7.0\PayrollManagementSystem.Model.AssemblyInfoInputs.cache
+C:\Users\sunme\OneDrive\Desktop\PayrollManagementSystem Final\PayrollManagementSystem\PayrollManagementSystem.Model\obj\Debug\net7.0\PayrollManagementSystem.Model.AssemblyInfo.cs
+C:\Users\sunme\OneDrive\Desktop\PayrollManagementSystem Final\PayrollManagementSystem\PayrollManagementSystem.Model\obj\Debug\net7.0\PayrollManagementSystem.Model.csproj.CoreCompileInputs.cache
+C:\Users\sunme\OneDrive\Desktop\PayrollManagementSystem Final\PayrollManagementSystem\PayrollManagementSystem.Model\obj\Debug\net7.0\PayrollManagementSystem.Model.genruntimeconfig.cache
+C:\Users\sunme\OneDrive\Desktop\PayrollManagementSystem Final\PayrollManagementSystem\PayrollManagementSystem.Model\obj\Debug\net7.0\ref\PayrollManagementSystem.Model.dll
